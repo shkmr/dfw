@@ -1,0 +1,9 @@
+#!/bin/sh
+# This script is used to generate
+# configuration files. It is relatively
+# hardcoded
+#
+aclocal
+autoconf
+autoheader
+automake

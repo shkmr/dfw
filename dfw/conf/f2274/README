@@ -1,0 +1,47 @@
+This direcotry is used for portablity check and some experimental stuff.
+All firmware is tested with MSP430F2274 on RF2500T.
+
+**** firmware list *****
+
+dfw :  DFW firmware for F2274. 
+       You need 3V serial interface for your host. eZ430U with 
+       PTFW can be used for this purpose.
+
+../fetuif/minidfw  :
+../ez430u/minidfw  :
+       These are stripped down version of dfw, will do
+       1) update EEPROM to make target FET a usbmodem,
+          so that dmwt can be usable.
+       2) wait for firmware update. (dmwt -f)
+
+writemini : 
+       Write minidfw into target FET, either FET430UIF or eZ430U,
+       through JTAG. This is standalone program, no host needed,
+       Since writemini embeds minidfw in the flash.
+
+ebfw : a test program to check functionarity of ../ez43u/ptfw
+
+See uif_f2274.c and uif_macros.h for JTAG pin assignments.
+
+
+*** ebfw usage example ****
+
+    $ ../../../dfwsh /dev/cu.usbmodem001 
+    (dfw) 
+    *
+    (dfw) o
+    LED OFF
+    (dfw) O
+    LED ON
+    (dfw) abracadabra
+    *
+    (dfw) o
+    LED OFF
+    (dfw) O
+    LED ON
+    (dfw) o
+    LED OFF
+    (dfw) ^D
+    $
+
+;;; EOF

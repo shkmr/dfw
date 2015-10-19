@@ -1,0 +1,19 @@
+-----------------------------------------------------------------------------
+1) HEX DATA RECORD FORMAT used between host PC and FET.
+
+This is similar to Intel HEX but different. Mainly because of
+ease of programming to support 32bit address space.
+
+:<type><len><addr1>....<addrN><data1>...<data_len><checksum>
+
+  <type> : record type.
+	0: normal 16bit address, i.e., N=2
+	8: extended 32bit address, i.e., N=4
+	1: end marker ":01000000FF"
+
+  <len>  : length of DATA. upto HEXWRITE_MAX defined in source code.
+
+  <addr?> : address bytes for address 0x1234, addr1 = 0x12, addr2 = 0x34.
+
+  <checksum> :
+-----------------------------------------------------------------------------

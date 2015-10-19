@@ -1,0 +1,29 @@
+/* Generally this software should run on some cheap unix/linux/cygwin
+   box. So, it is expected that it is expected that it is more or less 
+   modern. So, we did not see much need to go into great lengths 
+   supporting some rare combinations of various features. 
+   Below are sanity checks */
+
+/* The targets we know about at this time */
+/* TODO: add more targets here */
+#undef HAVE_TARGET_SKELETON_C
+
+#ifndef STDC_HEADERS
+ #error "ANSI C headers are required"
+#endif /* STDC_HEADERS */
+
+#ifndef HAVE_VPRINTF
+ #error "vprintf() is required"
+#endif /* HAVE_VPRINTF */
+
+#ifndef HAVE_GETTIMEOFDAY
+ #error "gettimeofday() is required"
+#endif /* HAVE_GETTIMEOFDAY */
+
+#ifndef HAVE_SELECT
+ #error "select() is required"
+#endif /* HAVE_SELECT */
+
+#ifndef HAVE_SOCKET
+ #error "socket() is required"
+#endif /* HAVE_SOCKET */

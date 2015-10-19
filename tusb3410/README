@@ -1,0 +1,16 @@
+This is the firmware source of a simple USB to serial converter based
+on a TUSB3410 chip. This firmware was written to interface cell phone
+with a FreeBSD host, but this code should be usable for other applications too.
+
+The code bases heavily on the firmware from BMLS project 
+(www.ibbro.de/refdownlo.html).
+
+You will need the 'SDCC' to compile the code. SDCC can be found at
+http://sdcc.sourceforge.net.
+
+You will also need gcc to compile the accompanying 'ihex2flat' in
+the ihex subdirectory. 'ihex2flat' is a very small and simple program
+just to convert an intel hex file into a loadable binary file. There
+might be other solutions for this on the net.
+
+
