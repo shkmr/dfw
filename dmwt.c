@@ -429,7 +429,7 @@ usage(char *name)
          "\n"
          "   FWS  n    : sets flash word size for CC8051 target.\n"
          "\n"
-         "URL http://homepage.mac.com/skimu/msp430/dfw/\n\n"
+         "URL http://shkmr.github.io/msp430/dfw/\n\n"
          );
   exit(1);
 }

@@ -27,7 +27,7 @@ usage(char *name)
          "TARGET_OPTIONS:\n\n"
          "   VCC xxxx  : sets VCC to XXXX mV (e.g., VCC 3300), FET430UIF only.\n\n"
          "   JTAG      : (default)\n\n"
-         "URL http://homepage.mac.com/skimu/msp430/dfw/\n\n"
+         "URL http://shkmr.github.io/msp430/dfw/\n\n"
          );
   exit(1);
 }
